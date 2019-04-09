@@ -1,33 +1,210 @@
-.App {
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 81vh;
+  background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-top {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-top h2 {
+  color: #fed136;
+  margin-left: 150px;
+  font-family: "Kaushan Script", cursive;
+  line-height: 42px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.header-top h2:hover {
+  color: #fec810;
+  cursor: pointer;
+}
+
+button {
+  color: white;
+  border-radius: 0.25rem;
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.ham {
+  display: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+
+.header-top nav {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  width: 500px;
+  margin-right: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top nav span:hover {
+  color: #fec810;
+  cursor: pointer;
+}
+
+.header-center {
+  margin-top: 100px;
+  height: 500px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-center h2 {
+  font-size: 40px;
+  font-family: Droid Serif;
+  font-style: italic;
+}
+
+.header-center h1 {
+  font-size: 72px;
+  margin-top: 15px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header-center button {
+  height: 70px;
+  width: 230px;
+  margin-top: 35px;
+  color: white;
+  font-size: 18px;
+  padding: 20px 40px;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-center button:hover {
+  cursor: pointer;
+  background-color: #fec810;
+  border-color: #fec810;
+}
+
+@media (max-width: 320px) {
+  header {
+    height: 95vh;
+  }
+  .header-top nav {
+    display: none;
+    justify-content: space-between;
+  }
+  .header-top h2 {
+    margin-left: 0px;
+  }
+  .ham {
+    display: block;
+  }
+  .header-top h2 {
+    font-size: 20px;
+  }
+  .header-center {
+    margin-top: 0px;
+  }
+  .header-top {
+    background-color: #282c34;
+    height: 60px;
+  }
+  .header-center h2 {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .header-center h1 {
+    font-size: 56px;
+    line-height: 1;
+  }
+}
+
+.portfolio {
+  width: 100%;
+  height: 140vh;
+  background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.portfolio h2 {
+  font-size: 40px;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  margin-top: 150px;
+}
+
+.portfolio p {
+  font-size: 16px;
+  font-style: italic;
+  color: #6c757d;
+  font-family: Droid Serif;
+  margin-bottom: 80px;
+}
+
+.thingy {
+  height: 800px;
+  width: 1100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.item {
+  background-color: white;
+  grid-column: auto;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.item div img {
+  height: 100%;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item h4 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  margin-top: 20px;
+}
+
+.item p {
+  color: #6c757d;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: Droid Serif;
+  margin-bottom: 20px;
 }
